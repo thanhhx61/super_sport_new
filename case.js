@@ -1,7 +1,7 @@
 function myFunction(x) {
     x.classList.toggle("change");
 }
-var myIndex = 0;
+let myIndex = 0;
 carousel();
 
 function carousel() {
