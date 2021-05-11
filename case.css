@@ -249,7 +249,7 @@ header .container .content_header .card_header{
 
   /* video */
   iframe {
-    width: 100%;
+    width: 99.5%;
     height: 550px;
     position: fixed;
     top: 4294;
