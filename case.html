@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="case.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="search_box.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .wrapper-product {
+            width: 100%;
+            display: inline-block;
+            justify-content: center;
+        }
+
+        .product {
+            width: 300px;
+            height: 210px;
+            position: relative;
+            display: inherit;
+        }
+
+        .product>img {
+            width: 100%;
+            height: 100%;
+            border: 1px solid white;
+        }
+
+        .product:hover>.hidden-layer {
+            opacity: 1;
+        }
+
+        .product>.hidden-layer {
+            left: 0;
+            top: 0;
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            transition: 200ms all;
+        }
+
+        .product>.hidden-layer>button {
+            border: 1px solid tomato;
+        }
+
+        button {
+            border-radius: 10px;
+            color: black;
+            background: #bdc3c7;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <header>
+            <div class="container">
+                <div class="content_header">
+                    <div class="logo_header">
+                        <img class="style_logo" src="image/logo/logo_moto.png" width="110px" height="100px"
+                            alt="logomoto">
+                    </div>
+                    <div class="menu_header">
+                        <nav>
+                            <ul class="nav_link">
+                                <li class="text-hover"><a href="#">MODELS</a>
+                                    <div></div>
+                                </li>
+                                <li class="text-hover"><a href="#">EQUIPMENT</a>
+                                    <div></div>
+                                </li>
+                                <li class="text-hover"><a href="#">CONFIGURATOR</a>
+                                    <div></div>
+                                </li>
+                                <li class="text-hover"><a href="#">TEST RIDE</a>
+                                    <div></div>
+                                </li>
+                                <li class="text-hover"><a href="#">SHOP</a>
+                                    <div></div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class="box">
+                                            <input type="text" placeholder="Search">
+                                            <a><i class="fas fa-search-location"></i></a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="card_head">
+                        <div class="card">
+                            <div class="style_menu" onclick="myFunction(this)">
+                                <div class="bar1"></div>
+                                <div class="bar2"></div>
+                                <div class="bar3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div>
+        <div class="w3-container">
+        </div>
+        <div></div>
+        <div class="w3-content w3-section">
+            <div class="mySlides w3-animate-left"
+                style="background: url('image/yamaha/yamaha_firrsst.jpg')no-repeat center center/cover; height: 500px;">
+                <div id="div1" class="move1">
+                    <h2 class="moving" style="color: #c8d6e5; font-size: 60px;">YAMAHA R1 <br> RIDE THE <br>NEXT LEVEL
+                    </h2>
+                </div>
+            </div>
+
+            <div class="mySlides w3-animate-left"
+                style="background: url('image/ducati/ducati_panigale_1299_first.jpg')no-repeat center center/cover; height: 500px;">
+                <div id="div1" class="move1">
+                    <h2 class="moving" style="color: #c8d6e5; font-size: 60px;">DUCATI PANIGALE <br> UNLOCK ANY ROAD
+                    </h2>
+                </div>
+            </div>
+
+            <div class="mySlides w3-animate-left"
+                style="background: url('image/Honda/wp7266197-honda-cbr1000rr-r-fireblade-sp-wallpapers.jpg')no-repeat center center/cover; height: 500px;">
+                <div id="div2" class="move1">
+                    <h2 class="moving" style="color: #c8d6e5; font-size: 60px;">HONDA CBR1000RR-R <br> FIREBLADE SP</h2>
+                </div>
+            </div>
+
+            <div class="mySlides w3-animate-left"
+                style="background: url('image/BMW/bmw-m1000rr-3840x2160_664454-mm-90.jpg')no-repeat center center/cover; height:500px;">
+                <div id="div3" class="move1">
+                    <h2 class="moving" style="color: #c8d6e5; font-size: 60px">BMW S1000 RR <br> THE SUPERBIKE <br> OF
+                        SUPERLATIVES</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br> <br><br>
+    <div style="display: flex; border-radius: 2px; ">
+        <div>
+            <div style="height: 10%;"></div>
+            <div style="height: 80%;">
+                <span class="category">monster Ar experience </span>
+                <h2 class="title">Discover the new <br> monster in Augmented <br> Reality</h2>
+                <span class="text_monster">you only need a smartphone to visualize the new Ducati Monster in 1.1
+                    scale wherever you like it </span>
+            </div>
+            <div style="height: 10%;"></div>
+        </div>
+        <div>
+            <img src="image/Monster-01-banner_Wide-663x249.jpg" alt="">
+        </div>
+    </div>
+    <br><br><br>
+    <div>
+        <h1 style="text-align: center;">DUCATI Ducati 2021 model range: <br> Discover all the bikes of the Ducati model
+            range 2021</h1>
+    </div>
+    <!-- bakazaru -->
+    <div class="wrapper-product">
+        <div class="product">
+            <!-- cai thu 1 -->
+            <img class="style_logo" src="image/ducati/MY21-Panigale-V4SP-Model-Blocks-630x390-01.jpg" width="110px"
+                height="100px" alt="logomoto">
+            <div class="hidden-layer">
+                <button>DUCATI PANIGALE <br> V4SP</button>
+                <button>SPECIFICATIONS</button>
+            </div>
+        </div>
+        <div class="product">
+            <!-- cai thu 2 -->
+            <img class="style_logo" src="image/ducati/MY21-Streetfighter-V4-Dark-Model-Blocks-630x390-01.jpg"
+                width="110px" height="100px" alt="logomoto">
+            <div class="hidden-layer">
+                <button>DUCATI streetfight v4</button>
+                <button>SPECIFICATIONS</button>
+            </div>
+        </div>
+        <div class="product">
+            <!-- cai thu 2 -->
+            <img class="style_logo" src="image/ducati/MY21-Superleggera-V4-Model-Blocks-630x390-01.jpg" width="110px"
+                height="100px" alt="logomoto">
+            <div class="hidden-layer">
+                <button>DUCATI SUPERLEGGERA V4</button>
+                <button>SPECIFICATIONS</button>
+            </div>
+        </div>
+        <div class="product">
+            <!-- cai thu 2 -->
+            <img class="style_logo" src="image/ducati/MY21-SuperSport-950S-White-Model-Blocks-630x390-01.jpg"
+                width="110px" height="100px" alt="logomoto">
+            <div class="hidden-layer">
+                <button>DUCATI SUPERSPORT <br> 950s</button>
+                <button>SPECIFICATIONS</button>
+            </div>
+        </div>
+        <div class="product">
+            <!-- cai thu 2 -->
+            <img class="style_logo" src="image/ducati/MY21-Diavel-1260S-Red-Model-Blocks-630x390-01.jpg" width="110px"
+                height="100px" alt="logomoto">
+            <div class="hidden-layer">
+                <button>DUCATI DIAVEL <br> 1260S</button>
+                <button>SPECIFICATIONS</button>
+            </div>
+        </div>
+        <div class="product">
+            <!-- cai thu 2 -->
+            <img class="style_logo" src="image/ducati/streetfight_v4.jpg" width="110px" height="100px" alt="logomoto">
+            <div class="hidden-layer">
+                <button>DUCATI STREETFIGHT V4</button>
+                <button>SPECIFICATIONS</button>
+            </div>
+        </div> <br><br><br>
+        <hr> <br><br><br>
+        <div style="display: flex; background-color: #95a5a6;" class="conten_yamaha">
+            <div>
+                <div style="height: 20%;"></div>
+                <div style="height: 60%;">
+                    <h2 class="title_yamaha"> Reserve Your 2021 R1M</h2>
+                    <p class="text_yamaha"
+                        style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                        The R1M is a limited edition race and track bike that is eqquipped with the most
+                        sophisticated
+                        electronic control technologies ever seen on a production Yamaha. the online reservation
+                        system is now open!
+                    </p>
+                </div>
+                <div style="height: 20%;"></div>
+            </div>
+            <div>
+                <img src="image/yamaha/2020-yamaha-r1m-track.jpg" alt="" width="400px" height="350px">
+            </div>
+        </div>
+        <br><br><br><br><br><br>
+        <div>
+            <h1 style="text-align: center;">YAMAHA SPORTBIKE MODELS 2021<br></h1>
+        </div>
+        <div class="wrapper-product">
+            <div class="product">
+                <!-- cai thu 1 -->
+                <img class="style_logo" src="image/yamaha/1242_yzf-r1m.jpg" width="110px" height="100px" alt="logomoto">
+                <div class="hidden-layer">
+                    <button>YAMAHA R1M<br> V4SP</button>
+                    <button>SPECIFICATIONS</button>
+                </div>
+            </div>
+            <div class="product">
+                <!-- cai thu 2 -->
+                <img class="style_logo" src="image/yamaha/Yamaha R1 2017.jpg" width="110px" height="100px"
+                    alt="logomoto">
+                <div class="hidden-layer">
+                    <button>YAMAHA R1</button>
+                    <button>SPECIFICATIONS</button>
+                </div>
+            </div>
+            <div class="product">
+                <!-- cai thu 2 -->
+                <img class="style_logo" src="image/yamaha/yamaha-yzf-r6-2020_main_1596164441.jpg" width="110px"
+                    height="100px" alt="logomoto">
+                <div class="hidden-layer">
+                    <button>YAMAHA R6</button>
+                    <button>SPECIFICATIONS</button>
+                </div>
+            </div>
+            <div class="product">
+                <!-- cai thu 2 -->
+                <img class="style_logo" src="image/yamaha/2017-Yamaha-MT-10-SP-Europe-studio-10.jpg" width="110px"
+                    height="100px" alt="logomoto">
+                <div class="hidden-layer">
+                    <button>YAMAHA MT10<br> 950s</button>
+                    <button>SPECIFICATIONS</button>
+                </div>
+            </div>
+            <div class="product">
+                <!-- cai thu 2 -->
+                <img class="style_logo" src="image/yamaha/Yamaha-MT09-Modell-2107.jpg" width="110px" height="100px"
+                    alt="logomoto">
+                <div class="hidden-layer">
+                    <button>YAMAHA MT09<br> 1260S</button>
+                    <button>SPECIFICATIONS</button>
+                </div>
+            </div>
+            <div class="product">
+                <!-- cai thu 2 -->
+                <img class="style_logo" src="image/yamaha/2019_YAMAHA_NIKEN_GT_EU_73-1.jpg" width="110px" height="100px"
+                    alt="logomoto">
+                <div class="hidden-layer">
+                    <button>YAMAHA NIKEN GT EU</button>
+                    <button>SPECIFICATIONS</button>
+                </div>
+            </div>
+            <br><br><br><br>
+            <hr> <br><br><br>
+
+            <div style="display: flex; background-color: #df1b21; color: #fff;">
+                <div>
+                    <h2>EVERYTHING BUT THE FACTORY CONTRACT</h2>
+                    <p
+                        style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                        What you see here is the best of the best, the most exclusive,
+                        feature-rich open-class sportbike Honda has ever built under the CBR banner. Introducing the
+                        limited edition CBR1000RR-R Fireblade SP. Street legal, but track ready. Offering a degree of
+                        performance and refinement you’ve likely never experienced—unless you’ve had a factory ride.
+                        Available to only a handful of lucky riders. And it still offers Honda’s famous CBR refinement,
+                        build quality, and rideability.
+                        Get ready to find out why world champions like Marc Márquez ride red. And why you should too.
+                    </p>
+                </div>
+                <div>
+                    <img src="image/Honda/downloadaa.jpg" alt="">
+                </div>
+            </div>
+            <br><br><br>
+            <div>
+                <h1 style="text-align: center;">HONDA SPORTBIKE <br> FEATURED MODELS</h1>
+            </div> <br> <br>
+            <div class="wrapper-product">
+                <div class="product">
+                    <!-- cai thu 1 -->
+                    <img class="style_logo" src="image/Honda/2020-honda-cbr1000rr-r.jpg" width="110px" height="100px"
+                        alt="logomoto">
+                    <div class="hidden-layer">
+                        <button style="border-radius: 10px;">HONDA CBR1000RR-R<br> V4SP</button>
+                        <button style="border-radius: 10px;">SPECIFICATIONS</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <!-- cai thu 2 -->
+                    <img class="style_logo" src="image/Honda/honda-cb1000r-.jpg" width="110px" height="100px"
+                        alt="logomoto">
+                    <div class="hidden-layer">
+                        <button style="border-radius: 10px;">HONDA CB1000R</button>
+                        <button style="border-radius: 10px;">SPECIFICATIONS</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <!-- cai thu 2 -->
+                    <img class="style_logo" src="image/Honda/honda-cb1000rr-r-.jpg" width="110px" height="100px"
+                        alt="logomoto">
+                    <div class="hidden-layer">
+                        <button style="border-radius: 10px;">HONDA CB1000RR-R</button>
+                        <button style="border-radius: 10px;">SPECIFICATIONS</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <!-- cai thu 2 -->
+                    <img class="style_logo" src="image/Honda/honda-cbr600rr-2021-danh-gia-xe-motosaigon-9.jpg"
+                        width="110px" height="100px" alt="logomoto">
+                    <div class="hidden-layer">
+                        <button style="border-radius: 10px;">HONDA CBR600RR<br> 950s</button>
+                        <button style="border-radius: 10px;">SPECIFICATIONS</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <!-- cai thu 2 -->
+                    <img class="style_logo" src="image/Honda/1550133773-498-a-1550119443-width640height480.jpg"
+                        width="110px" height="100px" alt="logomoto">
+                    <div class="hidden-layer">
+                        <button style="border-radius: 10px;">CBR 500RR</button>
+                        <button style="border-radius: 10px;">SPECIFICATIONS</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <!-- cai thu 2 -->
+                    <img class="style_logo" src="image/Honda/2021-honda-cbr-650-r-1.jpg" width="110px" height="100px"
+                        alt="logomoto">
+                    <div class="hidden-layer">
+                        <button style="border-radius: 10px;">CBR 650RR</button>
+                        <button style="border-radius: 10px;">SPECIFICATIONS</button>
+                    </div>
+                </div> <br><br><br><br><br>
+                <div>
+                    <div>
+                        <h2>TOP 9 New Motor sport BiKe In Year 2021</h2>
+                    </div> <br><br><br>
+                    <div>
+                        <iframe width="400" height="300" src="https://www.youtube.com/embed/510oR9l7RMo">
+                        </iframe>
+                    </div>
+                </div>
+                <div>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <div><img src="qc/1240x100.gif" alt="" width="100%"></div> <br><br>
+                    <div>
+                        <!-- bản tin -->
+                        <div class="wrapper-product">
+                            <div class="product">
+                                <!-- cai thu 1 -->
+                                <img class="style_logo" src="newspaper/MPU_time.gif" width="110px" height="100px"
+                                    alt="logomoto">
+                                <div>
+                                    <p>
+                                        <br><br><br>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <!-- cai thu 2 -->
+                                <img class="style_logo" src="newspaper/43-jack-miller_gp_2829.small.jpg" width="110px"
+                                    height="100px" alt="logomoto">
+                                <div>
+                                    <p
+                                        style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                                        REWIND - Chapter 4: Painting The Town Red
+                                        Tears of joy, tears of despair. History was made at the 2021 Spanish GP as Jerez
+                                        and MotoGP™ supplied the goods yet again
+
+                                        MotoGP
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <!-- cai thu 2 -->
+                                <img class="style_logo" src="newspaper/ho.small.jpg" width="110px" height="100px"
+                                    alt="logomoto">
+                                <div>
+                                    <p
+                                        style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                                        All you need to know about MotoGP™ start devices
+                                        Aprilia rider Aleix Espargaro and Race Manager Paolo Bonora talk us through all
+                                        the benefits of the tech trend seen in the premier class
+
+                                        MotoGP
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <!-- cai thu 2 -->
+                                <img class="style_logo" src="newspaper/neww1.jpg" width="110px" height="100px"
+                                    alt="logomoto">
+                                <div
+                                    style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                                    Acosta vs unfamiliar turf: can the roll continue?
+                                    The history-maker’s run of form is a force of nature. But will Le Mans prove a
+                                    different challenge?
+
+                                    Moto3, Pedro Acosta
+                                </div>
+                            </div>
+                            <div class="product">
+                                <!-- cai thu 2 -->
+                                <img class="style_logo" src="newspaper/motooo.jpg" width="110px" height="100px"
+                                    alt="logomoto">
+                                <div>
+                                    <p
+                                        style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                                        Other battles from the Spanish Grand Prix
+                                        Amid all the drama and excitement from a thrilling race in Jerez, you may have
+                                        missed some of the on track action. Catch up on it all here!
+
+                                        MotoGP
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <!-- cai thu 2 -->
+                                <img class="style_logo" src="newspaper/smalllllllll.jpg" width="110px" height="100px"
+                                    alt="logomoto">
+                                <div>
+                                    <p
+                                        style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                                        MotoE™ recharged and ready to fight it out in France
+                                        The FIM Enel MotoE™ World Cup sparks back into life at Le Mans, with Zaccone
+                                        arriving ahead
+
+                                        MotoE
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <!-- cai thu 2 -->
+                                <img class="style_logo" src="newspaper/ew.small.jpg" width="110px" height="100px"
+                                    alt="logomoto">
+                                <div>
+                                    <p
+                                        style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                                        Vive la France! MotoGP™ returns to legendary Le Mans
+                                        Round 5 of the 2021 World Championship is upon us as riders ready themselves for
+                                        the SHARK Grand Prix of France
+
+                                        MotoGP
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <!-- cai thu 2 -->
+                                <img class="style_logo" src="newspaper/timefra1_0.small.jpg" width="110px"
+                                    height="100px" alt="logomoto">
+                                <div>
+                                    <p
+                                        style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                                        TIME SCHEDULE: SHARK Grand Prix of France
+                                        Stay up to date with all the details from Round 5 of the MotoGP™ World
+                                        Championship in Le Mans
+
+                                        MotoGP, #FrenchGP
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><br><br><br>
+
+            <footer>
+                <div class="container">
+                    <!--Giới Thiệu-->
+                    <div class="noi-dung about">
+                        <h2>About Us</h2>
+                        <p style="color: black;">Lorem ipsumdolor sit...</p>
+                        <ul class="social-icon">
+                            <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                            <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                            <li><a href=""><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <!--Đường Dẫn-->
+                    <div class="noi-dung links">
+                        <h2>Path</h2>
+                        <ul>
+                            <li><a href="#">Home page</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Communications</a></li>
+                            <li><a href="#">Service</a></li>
+                            <li><a href="#">Policy Terms</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Liên Hệ-->
+                    <div class="noi-dung contact">
+                        <h2>Contact Info</h2>
+                        <ul class="info">
+                            <li>
+                                <span><i class="fa fa-map-marker"></i></span>
+                                <span>
+                                    Việt Nam</span>
+                            </li>
+                            <li>
+                                <span><i class="fa fa-phone"></i></span>
+                                <p><a href="#">+84 814262547</a>
+                                    <br />
+
+                            </li>
+                            <li>
+                                <span><i class="fa fa-envelope"></i></span>
+                                <p><a href="#">hoothanh611998@gmail.com</a></p>
+                            </li>
+                            <li>
+                                <form class="form">
+                                    <input type="email" class="form__field" placeholder="Đăng Ký Subscribe Email" />
+                                    <button type="button" class="btn btn--primary  uppercase">Send</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </footer>
+
+
+
+
+
+
+            <script src="case.js"></script>
+</body>
+
+</html>

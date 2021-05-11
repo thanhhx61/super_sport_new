@@ -1,0 +1,348 @@
+body{}
+
+/* kiểu menu */
+.style_menu {
+    display: inline-block;
+    cursor: pointer;
+}
+ 
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+ 
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+ 
+.change .bar2 {opacity: 0;}
+ 
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+/* kiểu menu end*/
+
+/* font menu */
+.nav_link#menu_header a{
+    position: relative;
+}
+.text-hover{
+    width: auto;
+    height: 40px;
+}
+.text-hover div{    
+    margin-top: 5px;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    display: none;
+    
+}
+.text-hover:hover > div{
+    display: block;
+    
+}
+.nav_link a::after:hover{
+    width: 100%;
+}
+
+
+*{
+    font-family: 'roboto', sans-serif;
+    margin: 0;
+    
+}
+.container{
+    max-width: 1140;
+    margin: 0 auto;
+}
+header{
+    background: black;
+    /* giữ nguyên menu */
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px slategrey; */
+}
+header .container .content_header{
+    display: flex;
+    align-items: center;
+}
+header .container .content_header .logo_header{
+    flex-basis: 10%;
+}
+header .container .content_header .menu_header{
+flex-basis: 80%;
+}
+header .container .content_header .menu_header nav .nav_link li{
+display: inline-block;
+list-style: none;
+margin: 0 20px;
+}
+header .container .content_header .menu_header nav .nav_link li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+}
+header .container .content_header .card_header{
+    flex-basis: 10%;
+}
+/* nền chữ ar monster ducati */
+.category{
+    font-family: "ducati-condensed", Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #666;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 0 0 13px 0;
+}
+.title{
+    font-family: "ducati-extended", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.4;
+    margin: 0 0 11px 0;
+}
+.text_monster{
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0 0 15px 0;
+}
+
+/* nền chữ yamaha */
+.conten_yamaha{
+    position: relative;
+    padding: 20px;
+    color: #353131;
+    background-color: #fff;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+.text_yamaha{
+    position: relative;
+    display: inline-block;
+    padding-right: 1em;
+    font-family: Ubuntu,sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0;
+    margin-bottom: 1em;
+}
+
+.moving{
+    position: absolute;
+    animation: movingword 1s forwards;
+    animation-delay: .2s;
+    margin-top:  200px;
+    font-size: 40px;
+    
+}
+
+@keyframes movingword{
+    0% {
+        padding-left: 0;
+    }
+    100%{
+        padding-left: 100px;
+    }
+}
+
+.fa-search-location:before {
+    content: "\f689";
+    color: black;
+}
+.box {
+    height: 60px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    
+  }
+   
+  input {
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 0px;
+    transition: 0.8s ease;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    
+    
+  }
+   
+  input::placeholder {
+    color: black;
+  }
+   
+  a {
+    color: whitesmoke;
+    text-align: center;
+    width: 60px;
+    font-size: 18px;
+  }
+   
+  .box:hover input {
+    width: 100px;
+    margin: 0 40px;
+    border-bottom: 2px solid red;
+  }
+   
+  input:focus {
+    width: 200px;
+    margin: 0 20px;
+    border-bottom: 2px solid red;
+  }
+
+
+
+  .dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+  /* video */
+  iframe {
+    width: 100%;
+    height: 550px;
+    position: fixed;
+    top: 4294;
+    left: 6;
+    object-fit: cover;
+    /* cố định vị trí video */
+    position: absolute;
+    }
+
+    .newspaper{
+        display: flex;
+        top: 4159;
+        left: 274px;
+    }
+
+
+
+    /* chân */
+    footer{
+        position: relative;
+        width: 1000;
+        height: auto;
+        padding: 50px 100px;
+        background: #95a5a6;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+   footer .container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+   
+   
+    /*Thiết Lập Cho Thành Phần Nội Dung Giới Thiệu*/
+    footer .container .noi-dung{
+        margin-right: 30px;
+    }
+   footer  .container .noi-dung.about{
+        width:40%;
+    }
+    footer .container .noi-dung.about h2{
+        position: relative;
+        color: #fff;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    footer .container .noi-dung.about h2:before{
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background: #f00;
+    }
+   footer .container .noi-dung.about p{
+        color: #999;
+    }
+    /*Thiết Lập Cho Thành Phần Icon Mạng Xã Hội*/
+    .social-icon{
+        margin-top: 20px;
+        display: flex;
+    }
+   .social-icon li {
+        list-style: none;
+    }
+    .social-icon li a{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: #222;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        text-decoration: none;
+        border-radius: 4px;
+    }
+   .social-icon li a:hover{
+        background: #f00;
+    }
+   .social-icon li a .fa{
+        color: #fff;
+        font-size: 20px;
+    }
+   .links h2{
+        position: relative;
+        color: #fff;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+
+    
